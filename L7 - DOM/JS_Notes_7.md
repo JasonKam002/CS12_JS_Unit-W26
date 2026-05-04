@@ -1,12 +1,12 @@
 ﻿## Chapter 7. DOM - Document Object Model
 
-Resource: https://javascript.info/searching-elements-dom
+Resources: https://javascript.info/searching-elements-dom
 
 The DOM is a tree of HTML elements, organized in the nested way they are written in the HTML file.
 
 DOM navigation properties are great when elements are close to each other. When they are not, we can use additional searching methods.
 
-#### `document.getElementById(id)`
+#### document.getElementById(id)
 If an element has an `id` attribute, we can get that element using `document.getElementById(id)`, no matter where it is.
 
 Do not forget: each `id` must be unique.
@@ -25,7 +25,7 @@ Do not forget: each `id` must be unique.
 </script>
 ```
 
-#### `document.querySelector(css)`
+#### document.querySelector(css)
 The call to `document.querySelector(css)` returns the first element that matches the given CSS selector.
 
 ```html
@@ -78,7 +78,6 @@ Edit the following HTML so that the button click calls a function that:
 
 ## The DOM Tree
 
-
 <h4 style="background-color: yellow;"> Task 7.2: DOM Manipulation </h4>
 
 Starter Code: [T7B_DOM_Manipulation.html](T7B_DOM_Manipulation/T7B_DOM_Manipulation.html) and [T7B_DOM_Manipulation.js](T7B_DOM_Manipulation/T7B_DOM_Manipulation.js) 
@@ -87,7 +86,7 @@ DOM methods and properties are part of Web APIs (libraries provided by the brows
 
 ![DOM Tree Structure](assets/DOM_Tree_Structure.jpg)
 
-## Getting Values
+#### Getting Values
 Through the DOM, we can access different properties of HTML elements.
 
 To access an element property on a webpage:
@@ -125,7 +124,7 @@ console.log(userInput);
 
 Note: values from inputs are returned as strings.
 
-## Using Variables
+#### Using Variables
 Instead of outputting values directly to the console each time, assign them to variables first.
 
 ```javascript
@@ -133,7 +132,7 @@ let headingText = document.querySelector('h2').textContent;
 console.log(headingText);
 ```
 
-## Setting Values
+#### Setting Values
 `querySelector()` can also be used to set or change properties.
 
 ```javascript
@@ -142,9 +141,41 @@ document.querySelector('h2').textContent = 'This heading has changed!';
 
 This does not permanently change the HTML file itself. It changes what is displayed in the page while the script runs.
 
-## Changing CSS Styles
+#### Changing CSS Styles
 You can also use `querySelector()` to manipulate CSS styles.
 
 ```javascript
 document.querySelector('h2').style.color = 'green';
 ```
+
+#### Reacting to Events
+
+The guess my number game above has 2 different buttons that the user will click to play the game. Clicking a button is an example of an event, or something that happens to an html element. There are lots of different types of events and the table below shows just a few.
+
+| Event     | Description                                              |
+| --------- | -------------------------------------------------------- |
+| click     | Event occurs when user clicks on an element              |
+| keypress  | Event occurs when user presses a key                     |
+| input     | Event occurs when an element gets user input             |
+| mouseover | Event occurs when mouse pointer is moved onto an element |
+
+
+JavaScript can react to events, and execute code when events are detected!
+To react to events we can use the addEventListener( ) method. 
+
+#### addEventListener( )
+In the example below, an event listener has been added to a button  element with the class name “again”. The .addEventListener method effectively listens or waits for an event, in this case a “click” indicating the user has clicked the button.
+
+Notice the .addEventListener method has 2 arguments: the ‘event’, and the function  (‘click’ , function( )  {}  )
+
+
+```javascript
+document.querySelector(".again").addEventListener("click", again);
+```
+
+#### Remove event listeners
+```javascript
+document.querySelector("selector").removeEventListener( "event" , function_name ) 
+```
+
+Only events that have been ADDED with addEventListener can be removed using removeEventListener.
