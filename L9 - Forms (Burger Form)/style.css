@@ -2,3 +2,53 @@ html {
   height: 100%;
   width: 100%;
 }
+
+h1, h2, h3 {
+  font-family:sans-serif;
+  color: red;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+h2 {
+  font-style: italic;
+  font-size: 20px;
+}
+
+img {
+  width: 180px;
+}
+
+.container {
+  padding: 15px;
+  background-color: khaki;
+  border: solid, red;
+  width: 470px;
+}
+
+header {
+  text-align: center;
+  line-height: 85%;
+}
+
+.flex {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(1fr, 9);
+  justify-items: flex-end;
+  gap: 5px;
+}
+
+.right {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  align-items: flex-end;
+  justify-items: center;
+}

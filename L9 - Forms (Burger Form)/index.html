@@ -9,7 +9,50 @@
 </head>
 
 <body>
-  Hello world
+  <div class="container">
+    <header>
+      <h1>Johnny LaRue's Burger Drive-Thru</h1>
+      <h2>A Big Man Ltd. Subsiduary</h2>
+    </header>
+    <div class="flex">
+      <div class="left">
+        <img src="burgers.gif">
+      </div>
+      <div class="right">
+        <form>
+          <div> Name: 
+            <input type="text" class="name">
+          </div>
+          <div> # of Burgers
+            <input type="text" class="#burgers">
+          </div>
+          <div> # of Fries
+            <input type="text" class="#fries">
+          </div>
+          <div> # of Drinks
+            <input type="text" class="#drinks">
+          </div>
+          <div> Subtotal 
+            <input type="text" readonly class="subtotal">
+          </div>
+          <div> Tax 
+            <input type="text" readonly class="tax">
+          </div>
+          <div> Total 
+            <input type="text" readonly class="total">
+          </div>
+          <div>
+            <button type="button">Order Total</button>
+          </div>
+          <div>
+            <button type="button">Reset</button>
+          </div>
+        </form>
+        <h3>Thanks for your order</h3>
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 
